@@ -1,6 +1,12 @@
-<p><span>{{greeting}}</span><span data-ng-bind="username"></span> - this uses different types of input.</p>
+<p><span>{{greeting}}</span><span data-ng-bind="username"></span><span data-ng-bind="nickname"></span><span style="display:hidden" data-ng-bind="password"></span> - this uses different types of input.</p>
+<div>Nickname
+  <input ng-model="nickname" type="text"/>
+</div>
 <div>Username
   <input ng-model="username" type="text"/>
+</div>
+<div>Password
+  <input ng-model="password" type="password"/>
 </div>
 <div ng-style="{'color': color}">Color <br/>
   <input ng-model="color" value="blue" type="radio"/> blue <br/>

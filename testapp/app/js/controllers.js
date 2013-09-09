@@ -92,6 +92,8 @@ function BindingsCtrl($scope) {
 
   $scope.planet = $scope.planets[0];
 
+  // $scope.selectedPlanets = $scope.planets[0];  
+
   $scope.getRadiusKm = function() {
     return $scope.planet.radius * 0.6213;
   };
@@ -100,6 +102,7 @@ BindingsCtrl.$inject = ['$scope'];
 
 function FormCtrl($scope) {
   $scope.greeting = "Hiya";
+  $scope.nickname = "Abe";
   $scope.username = "Anon";
   $scope.color = "blue";
   $scope.show = true;

@@ -7,6 +7,7 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives'])
     $routeProvider.when('/http', {templateUrl: 'partials/partial1.html', controller: MyCtrl1});
     $routeProvider.when('/repeater', {templateUrl: 'partials/partial2.html', controller: MyCtrl2});
     $routeProvider.when('/bindings', {templateUrl: 'partials/bindings.html', controller: BindingsCtrl});
+    $routeProvider.when('/multi_bindings', {templateUrl: 'partials/multi_bindings.html', controller: BindingsCtrl});
     $routeProvider.when('/form', {templateUrl: 'partials/form.html', controller: FormCtrl});
     $routeProvider.when('/async', {templateUrl: 'partials/async.html', controller: AsyncCtrl});
     $routeProvider.when('/conflict', {templateUrl: 'partials/conflict.html', controller: ConflictCtrl});
