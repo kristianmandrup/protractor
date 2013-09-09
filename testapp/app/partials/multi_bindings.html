@@ -3,8 +3,9 @@
   <span>{{ball.name}}</span>:<span>{{$index + 1}}</span>
 </li></div>
 <div>Details for:
-<select multiple="true" ng-model="planet" ng-options="planet.name for planet in planets">
-</select>
+<select id="planets" multiple="multiple" ng-model="selectedPlanets">
+        <option ng-repeat="planet in planets" value="{{planet.name}}">{{planet.name}}</option>
+    </select>
 <div>
   <div>{{planets}}</div>
 </div>

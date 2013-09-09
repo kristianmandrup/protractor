@@ -1,3 +1,8 @@
+<script>
+  function expand(elem, text) {
+    var tn = document.createTextNode(text);
+    this.appendChild(tn);
+  }
 
 <div>Planets <li ng-repeat="ball in planets">
   <span>{{ball.name}}</span>:<span>{{$index + 1}}</span>
@@ -11,3 +16,6 @@
   <div>Moons: <span ng-repeat="moon in planet.moons">{{moon}}</span></div>
 </div>
 </div>
+<div id="expander" onclick="expand(this, 'expanded')"></div>
+<input name="namedInput" onclick="this.value = 'clicked';" value=""/>
+

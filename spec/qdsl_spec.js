@@ -119,6 +119,19 @@ describe('Qdsl #bindings', function() {
     qdsl.navigateTo('app/index.html#/bindings');
   });
 
+  // Should add text 'expanded' when clicked
+  it('selectById - select element by Id', function() {
+    expect(qdsl.byId('expander').getText()).toEqual('');
+    qdsl.selectById('expander');
+    expect(qdsl.byId('expander').getText()).toEqual('expanded');
+  });
+  
+  it('selectByName - select element by name', function() {
+    expect(qdsl.byName('namedInput').getAttribute('value')).toEqual('');
+    qdsl.selectByName('namedInput');
+    expect(qdsl.byName('namedInput').getAttribute('value')).toEqual('clicked');
+  });
+
   it('bySelectedOption - should find elements using a select', function() {
     expect(qdsl.bySelectedOption('planet').getText()).toEqual('Mercury');
   });
@@ -143,6 +156,7 @@ describe('Qdsl #multi_bindings', function() {
 
 
   // TODO: Research multi select
+  // See fx: http://stackoverflow.com/questions/16933324/angularjs-ng-repeat-in-bootstrap-multiselect-dropdown
   it('selectMany - select options on selector', function() {
     // There must be a better way to do this.
     // qdsl.selectMany('planet', [3, 4]);

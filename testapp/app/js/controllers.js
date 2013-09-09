@@ -92,7 +92,7 @@ function BindingsCtrl($scope) {
 
   $scope.planet = $scope.planets[0];
 
-  // $scope.selectedPlanets = $scope.planets[0];  
+  $scope.selectedPlanets = [];
 
   $scope.getRadiusKm = function() {
     return $scope.planet.radius * 0.6213;
